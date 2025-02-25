@@ -1,1 +1,15 @@
 
+# Başlıq
+Bu adi mətn kimi görünəcək.
+
+## Kiçik Başlıq
+- Siyahı elementi 1  
+- Siyahı elementi 2  
+
+**Qalın mətn** və *italic mətn*.  
+
+```rust
+fn main() {
+    println!("Salam, dünya!");
+}
+```
