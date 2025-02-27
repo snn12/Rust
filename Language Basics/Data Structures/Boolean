@@ -1,0 +1,4 @@
+fn main() {
+    let is_active: bool = true;
+    println!("Is active: {}", is_active);
+}
