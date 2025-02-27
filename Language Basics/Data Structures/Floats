@@ -1,0 +1,5 @@
+fn main() {
+    let a: f32 = 3.14; // 32-bit float
+    let b: f64 = 2.718; // 64-bit float
+    println!("a: {}, b: {}", a, b);
+}
