@@ -1,0 +1,47 @@
+fn main(){
+    let number = 5;
+    if number < 0 {
+        println!("condition was musbet");
+    } else {
+        println!("condition was mrnfi");
+    }
+    if number == 0 {
+        println!("number is zero");
+    }
+
+
+    let mut counter = 0;
+    loop {
+        counter += 1;
+        if counter == 10 {
+            break;
+        }
+    }
+    
+        let mut x = 6;
+        while x>0 {
+            println!("{}!", x);
+            x -= 1;
+        }
+        
+            let a = [10, 20, 30, 40, 50];
+            for element in a.iter() {
+                println!("the value is: {}", element);
+            }
+
+            for i in 1..5 {
+                println!("{}!", i);
+            }
+
+            let day = 3;
+            match day {
+                1 => println!("Monday"),
+                2 => println!("Tuesday"),
+                3 => println!("Wednesday"),
+                4 => println!("Thursday"),
+                5 => println!("Friday"),
+                6 => println!("Saturday"),
+                7 => println!("Sunday"),
+                _ => println!("Invalid day"),
+            }
+}
