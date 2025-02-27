@@ -1,0 +1,28 @@
+fn topla(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn main() {
+    let result = topla(5, 10);
+    println!("Result: {}", result);
+}
+
+
+
+#second
+
+
+struct    Daire {
+    radius: f64,
+}
+    impl Daire{ 
+        fn alan(&self) -> f64 {
+            std::f64::consts::PI * self.radius * self.radius
+        }
+    }
+
+        fn main() {
+            let daire = Daire { radius: 5.0 };
+            println!("Dairenin alanı: {}", daire.alan());
+
+}
