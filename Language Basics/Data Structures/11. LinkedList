@@ -1,0 +1,9 @@
+use std::collections::LinkedList;
+
+fn main() {
+    let mut mur_list: LinkedList<i32> = LinkedList::new();
+    mur_list.push_back(1);
+    mur_list.push_back(2);
+    mur_list.push_back(3);
+    println!("{:?}", mur_list);
+}
