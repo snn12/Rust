@@ -1,0 +1,39 @@
+fn find(price: i32 ){
+    match price{
+        0 => println!("price is zero"),
+        1 => println!("price is one"),  
+        1..=5 => println!("price is between 1 and 5"),
+        _ => println!("price is greater than 5"),
+    }
+}
+
+    fn main(){
+       find(0);
+         find(1);
+            find(200);
+                find (62);
+    }
+
+
+
+#second
+
+struct Insan {
+    name: String,
+    age: u32,
+}
+
+fn main() {
+    let mut ali = Insan {
+        name: String::from("Ali"),
+        age: 20,
+    };
+    
+    println!("{} is {} years old", ali.name, ali.age);
+    ali.age = 21;
+    println!("{} is {} years old", ali.name, ali.age);
+
+    // Destructuring
+    let Insan { name, age } = ali;
+    println!("{} is {} years old", name, age);
+}
