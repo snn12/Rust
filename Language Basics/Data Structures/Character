@@ -1,0 +1,4 @@
+fn main() {
+    let c: char = 'A';
+    println!("Character: {}", c);
+}
