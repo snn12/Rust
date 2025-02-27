@@ -1,0 +1,17 @@
+use std::collections::BinaryHeap;
+
+fn main() {
+    let mut heap: BinaryHeap<i32> = BinaryHeap::new();
+
+    // Dəyərləri əlavə edirik
+    heap.push(5);
+    heap.push(10);
+    heap.push(3);
+
+    // Ən böyük dəyərə baxırıq
+    println!("Max value: {:?}", heap.peek()); // Çıxış: Max value: Some(10)
+
+    // Ən böyük dəyəri çıxarırıq
+    let max_value = heap.pop();
+    println!("Removed max value: {:?}", max_value); // Çıxış: Removed max value: Some(10)
+}
