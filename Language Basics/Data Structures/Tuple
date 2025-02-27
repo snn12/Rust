@@ -1,0 +1,5 @@
+fn main() {
+    let tuple: (i32, f64, char) = (42, 3.14, 'x');
+    let (x, y, z) = tuple; // Destructuring
+    println!("Tuple: x: {}, y: {}, z: {}", x, y, z);
+}
