@@ -1,1 +1,27 @@
+trait Animal {
+    fn sound(&self) -> String ;
+}
+    struct Dog;
+    struct Cat;
 
+    impl Animal for Dog {
+        fn sound(&self) -> String {
+            "Woof".to_string()
+        }
+    }
+        impl Animal for Cat {
+        fn sound(&self) -> String {
+            "Meow".to_string()
+        }
+    }      
+
+        fn make_sound<T: Animal>(animal: T) {
+            println!("{}", animal.sound());
+        }
+        
+        fn main() {
+            let dog = Dog;
+            let cat = Cat;
+            make_sound(dog);
+            make_sound(cat);
+        }
