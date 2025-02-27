@@ -1,1 +1,31 @@
+fn main() {
+    let mut x: i32 = 10;
+    println!("The value of x is: {}", x);
 
+    x = 20;
+    println!("The value of x is: {}", x);
+
+
+    const PI: f32 = 3.14159;
+    println!("The value of PI is: {}", PI);
+
+    let a: u8 = 255;
+    let b: u16 = 65500;
+    println!("The value of a is: {}", a);
+    println!("The value of b is: {}", b);
+
+    let c: f64 = 3.14159;
+    println!("The value of c is: {}", c);
+    let d: f32 = 3.14159;
+    println!("The value of d is: {}", d);
+
+    let letter: char = 'A';
+    println!("The value of letter is: {}", letter);
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    println!("The value of tuple is: {:?}", tup);
+
+
+    let arr: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("The value of array is: {:?}", arr);
+}
