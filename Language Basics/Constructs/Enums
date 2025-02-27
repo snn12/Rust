@@ -1,1 +1,22 @@
+// Shape enum-u, müxtəlif geometrik formaları təmsil edir
+enum Shape {
+    Circle(f64),            // Dairənin radiusu
+    Rectangle(f64, f64),   // Düzbucaqlının eni və hündürlüyü
+}
+
+// Dairənin sahəsini hesablayan funksiya
+fn area(shape: &Shape) -> f64 {
+    match shape {
+        Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+        Shape::Rectangle(width, height) => width * height,
+    }
+}
+
+fn main() {
+    let circle = Shape::Circle(5.0);
+    let rectangle = Shape::Rectangle(4.0, 6.0);
+
+    println!("Dairənin sahəsi: {}", area(&circle));      // Çıxış: Dairənin sahəsi: 78.53981633974483
+    println!("Düzbucaqlının sahəsi: {}", area(&rectangle)); // Çıxış: Düzbucaqlının sahəsi: 24
+}
 
