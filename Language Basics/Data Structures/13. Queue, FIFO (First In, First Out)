@@ -1,0 +1,16 @@
+use std::collections::VecDeque;
+
+fn main() {
+    let mut queue: VecDeque<i32> = VecDeque::new();
+
+    // Elementləri əlavə edirik
+    queue.push_back(1);
+    queue.push_back(2);
+    queue.push_back(3);
+
+    println!("Queue: {:?}", queue); // Çıxış: Queue: [1, 2, 3]
+
+    // İlk elementi çıxarırıq
+    let front = queue.pop_front();
+    println!("Removed from queue: {:?}", front); // Çıxış: Removed from queue: Some(1)
+}
