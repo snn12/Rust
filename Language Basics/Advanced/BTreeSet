@@ -1,0 +1,13 @@
+use std::collections::BTreeSet;
+
+fn main() {
+    let mut product_ids = BTreeSet::new();
+    product_ids.insert(1);
+    product_ids.insert(2);  
+    product_ids.insert(3);
+
+
+    for id in product_ids.range(1..=2) {
+        println!("{}", id);
+    }
+}
