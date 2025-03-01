@@ -1,0 +1,24 @@
+use std::collections::BTreeMap;
+
+fn main (){
+    let mut map = BTreeMap::new();
+    map.insert(3, "c");
+    map.insert(2, "b");
+    map.insert(4, "d");
+
+    for (key, value) in &map {
+        println!("{}: {}", key, value);
+    }
+
+    
+    if let Some(fruit) = map.get(&3){
+        println!("found: {}", fruit);
+    }
+
+    map.remove(&3);
+
+    if !map.contains_key(&3){
+        println!("3 is gone!");
+    }
+}
+ 
