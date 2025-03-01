@@ -1,0 +1,30 @@
+use std::rc::Rc;
+
+struct User {
+    name: String,
+    friends: Vec<Rc<User>>,
+}
+
+fn main() {
+    let alice = Rc::new(User {
+        name: String::from("Alice"),
+        friends: Vec::new(),
+    });
+
+    let bob = Rc::new(User {
+        name: String::from("Bob"),
+        friends: Vec::new(),
+    });
+
+    // Yeni dost siyahıları yaradaraq dostluq əlavə edirik
+    let mut alice_friends = vec![Rc::clone(&bob)];
+    let mut bob_friends = vec![Rc::clone(&alice)];
+
+    // `Rc<User>` dəyişməzdir (immutable), ona görə də struct-ı birbaşa dəyişmək mümkün deyil.
+    // Bunun əvəzinə, `User` struct-ını `RefCell` ilə qablaşdırmaq lazımdır (əgər dəyişiklik etmək lazımdırsa).
+
+    println!("Alice'nin dostlarının sayı: {}", alice_friends.len());
+    println!("Bob'un dostlarının sayı: {}", bob_friends.len());
+
+    // `Rc::strong_count` obyektə neçə `Rc` göstəricisinin olduğunu göstərir
+}
