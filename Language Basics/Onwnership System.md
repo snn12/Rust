@@ -65,7 +65,6 @@ The heap is a dynamic memory region that can grow or shrink.
 - Data on the heap is accessed via pointers.
 - Example: Types like `Box`, `Vec`, and `String` are stored on the heap.
 
-### Example Code
 ```rust
 let s = String::from("hello"); // String is stored on the heap.
 let x = 5; // x is stored on the stack.
