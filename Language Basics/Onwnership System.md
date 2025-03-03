@@ -48,6 +48,7 @@ println!("{}", s2);
 fn change(s: &mut String) {
     s.push_str("!");
 }
+```
 
 # Deep Dive: Stack vs Heap
 
