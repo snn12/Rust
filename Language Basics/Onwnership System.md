@@ -50,7 +50,7 @@ fn change(s: &mut String) {
 }
 ```
 
-# Deep Dive: Stack vs Heap
+# 4. Deep Dive: Stack vs Heap
 
 ## Stack
 The stack is a fast, automatically managed memory region.
@@ -71,7 +71,7 @@ let s = String::from("hello"); // String is stored on the heap.
 let x = 5; // x is stored on the stack.
 ```
 
-## 4. Stack vs Heap Comparison
+##  Stack vs Heap Comparison
 
 | Stack | Heap |
 |-------|------|
