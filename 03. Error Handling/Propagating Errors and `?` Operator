@@ -1,0 +1,16 @@
+use std::fs::File;
+use std::io::{self, Read};
+
+fn read_file_contents(filename: &str) -> io::Result<String> {
+    let mut file = File::open(filename)?;  // Propagates error if file cannot be opened.
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)?;
+    Ok(contents)
+}
+
+fn main() {
+    match read_file_contents("example.txt") {
+        Ok(text) => println!("File contents:\n{}", text),
+        Err(e) => println!("Error: {}", e),
+    }
+}
