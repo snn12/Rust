@@ -1,0 +1,11 @@
+fn find_value(vec: &[i32], target: i32) -> Option<usize> {
+    vec.iter().position(|&x| x == target)
+}
+
+fn main() {
+    let numbers = vec![1, 2, 3];
+    match find_value(&numbers, 2) {
+        Some(index) => println!("Found at index: {}", index),
+        None => println!("Not found!"),
+    }
+}
