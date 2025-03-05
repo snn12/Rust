@@ -1,0 +1,31 @@
+use std::fmt;
+
+#[derive(Debug)]
+enum MyError {
+    NotFound,
+    PermissionDenied,
+}
+
+impl fmt::Display for MyError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            MyError::NotFound => write!(f, "Element not found"),
+            MyError::PermissionDenied => write!(f, "Permission denied"),
+        }
+    }
+}
+
+fn might_fail(condition: bool) -> Result<(), MyError> {
+    if condition {
+        Err(MyError::NotFound)
+    } else {
+        Ok(())
+    }
+}
+
+fn main() {
+    match might_fail(true) {
+        Ok(_) => println!("Success"),
+        Err(e) => println!("Error: {}", e),
+    }
+}
